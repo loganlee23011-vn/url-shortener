@@ -1,0 +1,2 @@
+D:\UrlShortener\Shorten.Client\shorten.client.client\obj\Debug\shorten.client.client.esproj.CoreCompileInputs.cache
+C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Client\shorten.client.client\obj\Debug\shorten.client.client.esproj.CoreCompileInputs.cache

@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Shorten.Redirect",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Url/shorten": {
+      "post": {
+        "tags": [
+          "Url"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Url/r/{shortCode}": {
+      "get": {
+        "tags": [
+          "Url"
+        ],
+        "parameters": [
+          {
+            "name": "shortCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:50420",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "D:\\UrlShortener\\Shorten.Client\\Shorten.Client.Server\\..\\shorten.client.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
