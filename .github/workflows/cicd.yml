@@ -31,17 +31,17 @@ jobs:
         run: |
           docker build \
             -f Shorten.Redirect/Dockerfile.txt \
-            -t ${{ secrets.DOCKER_USERNAME }}/url-shortener:${{ github.sha }} \
-            -t ${{ secrets.DOCKER_USERNAME }}/url-shortener:latest \
+            -t loganlee23011/url-shortener:${{ github.sha }} \
+            -t loganlee23011/url-shortener:latest \
             .
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
           username: loganlee23011
-          password: dckr_pat_Rxo_Mlsz-hsPdrBtCb0ni6oada0
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/url-shortener:${{ github.sha }}
-          docker push ${{ secrets.DOCKER_USERNAME }}/url-shortener:latest
+          docker push loganlee23011/url-shortener:${{ github.sha }}
+          docker push loganlee23011/url-shortener:latest
