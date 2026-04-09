@@ -4,6 +4,7 @@ using Shorten.Data.Repositories;
 using Shorten.Redirect.Services;
 
 namespace Shorten.Tests
+#TEST
 {
     public class UrlServiceTests
     {

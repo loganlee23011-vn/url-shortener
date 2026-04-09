@@ -1,0 +1,8 @@
+.vs/
+**/.vs/
+**/bin/
+**/obj/
+**/node_modules/
+**/*.user
+**/*.slnLaunch.user
+**/*.db
