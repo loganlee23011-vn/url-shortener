@@ -30,7 +30,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-            -f Shorten.Redirect/Dockerfile \
+            -f Shorten.Redirect/Dockerfile.txt \
             -t ${{ secrets.DOCKER_USERNAME }}/url-shortener:${{ github.sha }} \
             -t ${{ secrets.DOCKER_USERNAME }}/url-shortener:latest \
             .
