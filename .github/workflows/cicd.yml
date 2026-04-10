@@ -45,3 +45,8 @@ jobs:
         run: |
           docker push loganlee23011/url-shortener:${{ github.sha }}
           docker push loganlee23011/url-shortener:latest
+
+      - name: Deploy to Render
+        run: |
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
+    
