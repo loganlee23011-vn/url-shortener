@@ -1,18 +1,23 @@
 ﻿import { useState } from "react";
+import "./App.css";
+
+const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:5092/api/url/shorten";
 
 function App() {
     const [inputUrl, setInputUrl] = useState("");
     const [shortUrl, setShortUrl] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
+    const [copied, setCopied] = useState(false);
 
     const handleShorten = async () => {
         setError("");
         setShortUrl("");
+        setCopied(false);
         setLoading(true);
 
         try {
-            const response = await fetch("http://localhost:5092/api/url/shorten", {
+            const response = await fetch(API_URL, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(inputUrl),
@@ -27,97 +32,109 @@ function App() {
             const data = await response.json();
             setShortUrl(data.shortUrl);
         } catch {
-            setError("Không thể kết nối đến server.");
+            setError("Khong the ket noi den server.");
         } finally {
             setLoading(false);
         }
     };
 
+    const handleCopy = async () => {
+        if (!shortUrl) return;
+
+        await navigator.clipboard.writeText(shortUrl);
+        setCopied(true);
+        window.setTimeout(() => setCopied(false), 1800);
+    };
+
     return (
-        <div style={styles.container}>
-            <h1 style={styles.title}>🔗 URL Shortener</h1>
+        <main className="page-shell">
+            <div className="ambient ambient-left" />
+            <div className="ambient ambient-right" />
 
-            <input
-                style={styles.input}
-                type="text"
-                placeholder="Nhập URL dài vào đây..."
-                value={inputUrl}
-                onChange={(e) => setInputUrl(e.target.value)}
-            />
+            <header className="topbar">
+                <div className="brand">Shrtly</div>
+                <nav className="nav-links" aria-label="Primary">
+                    <a href="#hero">Home</a>
+                    <a href="#shortener">All links</a>
+                    <a href="#shortener">Users</a>
+                </nav>
+                <div className="nav-actions">
+                    <button type="button" className="ghost-button">Log in</button>
+                    <button type="button" className="solid-button">Sign up</button>
+                </div>
+            </header>
 
-            <button style={styles.button} onClick={handleShorten} disabled={loading}>
-                {loading ? "Đang xử lý..." : "Rút gọn"}
-            </button>
+            <section className="hero" id="hero">
+                <div className="eyebrow">Free URL shortener</div>
+                <h1>
+                    Turn long links into
+                    <span> clean, shareable </span>
+                    ones
+                </h1>
+                <p className="hero-copy">
+                    Paste any URL below and get a short link instantly with a cleaner,
+                    calmer interface that feels closer to a polished landing page.
+                </p>
+            </section>
 
-            {shortUrl && (
-                <div style={styles.result}>
-                    <p>✅ URL rút gọn:</p>
-                    <a href={shortUrl} target="_blank" rel="noreferrer">
-                        {shortUrl}
-                    </a>
+            <section className="shortener-card" id="shortener">
+                <div className="card-header">
+                    <p className="card-kicker">Shorten a link</p>
+                    <h2>Paste your long URL to get started</h2>
+                </div>
+
+                <label className="field-label" htmlFor="url-input">
+                    Your URL
+                </label>
+
+                <div className="input-stack">
+                    <input
+                        id="url-input"
+                        className="url-input"
+                        type="text"
+                        placeholder="https://example.com/very-long-url-goes-here"
+                        value={inputUrl}
+                        onChange={(e) => setInputUrl(e.target.value)}
+                    />
+
                     <button
-                        style={styles.copy}
-                        onClick={() => navigator.clipboard.writeText(shortUrl)}
+                        type="button"
+                        className={`submit-button${loading ? " is-loading" : ""}`}
+                        onClick={handleShorten}
+                        disabled={loading}
                     >
-                        Copy
+                        {loading ? "Dang xu ly..." : "Get my short link"}
+                        <span aria-hidden="true">→</span>
                     </button>
                 </div>
-            )}
 
-            {error && <p style={styles.error}>❌ {error}</p>}
-        </div>
+                {shortUrl && (
+                    <div className="feedback-panel success-panel">
+                        <div>
+                            <p className="feedback-title">Short URL is ready</p>
+                            <a href={shortUrl} target="_blank" rel="noreferrer">
+                                {shortUrl}
+                            </a>
+                        </div>
+                        <button
+                            type="button"
+                            className={`copy-button${copied ? " copied" : ""}`}
+                            onClick={handleCopy}
+                        >
+                            {copied ? "Copied" : "Copy link"}
+                        </button>
+                    </div>
+                )}
+
+                {error && (
+                    <div className="feedback-panel error-panel">
+                        <p className="feedback-title">Request failed</p>
+                        <p>{error}</p>
+                    </div>
+                )}
+            </section>
+        </main>
     );
 }
-
-const styles = {
-    container: {
-        maxWidth: 500,
-        margin: "80px auto",
-        padding: 32,
-        borderRadius: 12,
-        boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-        fontFamily: "sans-serif",
-        textAlign: "center",
-    },
-    title: {
-        fontSize: 28,
-        marginBottom: 24,
-    },
-    input: {
-        width: "100%",
-        padding: "10px 14px",
-        fontSize: 16,
-        borderRadius: 8,
-        border: "1px solid #ccc",
-        marginBottom: 12,
-        boxSizing: "border-box",
-    },
-    button: {
-        padding: "10px 28px",
-        fontSize: 16,
-        backgroundColor: "#4f46e5",
-        color: "white",
-        border: "none",
-        borderRadius: 8,
-        cursor: "pointer",
-    },
-    result: {
-        marginTop: 24,
-        padding: 16,
-        backgroundColor: "#f0fdf4",
-        borderRadius: 8,
-    },
-    copy: {
-        marginLeft: 10,
-        padding: "4px 12px",
-        cursor: "pointer",
-        borderRadius: 6,
-        border: "1px solid #ccc",
-    },
-    error: {
-        color: "red",
-        marginTop: 16,
-    },
-};
 
 export default App;

@@ -10265,23 +10265,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FSC\\.nuget\\packages\\": {},
+    "C:\\Users\\pkhan\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FSC\\Downloads\\UrlShortener\\UrlShortener\\Shorten.Tests\\Shorten.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\pkhan\\OneDrive - University of Greenwich\\GWU\\Advanced Microservices Development and Deployment\\url-shortener\\Shorten.Tests\\Shorten.Tests.csproj",
       "projectName": "Shorten.Tests",
-      "projectPath": "C:\\Users\\FSC\\Downloads\\UrlShortener\\UrlShortener\\Shorten.Tests\\Shorten.Tests.csproj",
-      "packagesPath": "C:\\Users\\FSC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FSC\\Downloads\\UrlShortener\\UrlShortener\\Shorten.Tests\\obj\\",
+      "projectPath": "C:\\Users\\pkhan\\OneDrive - University of Greenwich\\GWU\\Advanced Microservices Development and Deployment\\url-shortener\\Shorten.Tests\\Shorten.Tests.csproj",
+      "packagesPath": "C:\\Users\\pkhan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pkhan\\OneDrive - University of Greenwich\\GWU\\Advanced Microservices Development and Deployment\\url-shortener\\Shorten.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\FSC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pkhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10296,11 +10296,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\FSC\\Downloads\\UrlShortener\\UrlShortener\\Shorten.Data\\Shorten.Data.csproj": {
-              "projectPath": "C:\\Users\\FSC\\Downloads\\UrlShortener\\UrlShortener\\Shorten.Data\\Shorten.Data.csproj"
+            "C:\\Users\\pkhan\\OneDrive - University of Greenwich\\GWU\\Advanced Microservices Development and Deployment\\url-shortener\\Shorten.Data\\Shorten.Data.csproj": {
+              "projectPath": "C:\\Users\\pkhan\\OneDrive - University of Greenwich\\GWU\\Advanced Microservices Development and Deployment\\url-shortener\\Shorten.Data\\Shorten.Data.csproj"
             },
-            "C:\\Users\\FSC\\Downloads\\UrlShortener\\UrlShortener\\Shorten.Redirect\\Shorten.Redirect.csproj": {
-              "projectPath": "C:\\Users\\FSC\\Downloads\\UrlShortener\\UrlShortener\\Shorten.Redirect\\Shorten.Redirect.csproj"
+            "C:\\Users\\pkhan\\OneDrive - University of Greenwich\\GWU\\Advanced Microservices Development and Deployment\\url-shortener\\Shorten.Redirect\\Shorten.Redirect.csproj": {
+              "projectPath": "C:\\Users\\pkhan\\OneDrive - University of Greenwich\\GWU\\Advanced Microservices Development and Deployment\\url-shortener\\Shorten.Redirect\\Shorten.Redirect.csproj"
             }
           }
         }
@@ -10315,7 +10315,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -10363,12 +10363,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.23, 8.0.23]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.23, 8.0.23]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.23, 8.0.23]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

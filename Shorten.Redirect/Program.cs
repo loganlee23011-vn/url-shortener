@@ -58,5 +58,13 @@ app.MapControllers();
 
 app.MapGet("/", () => Results.Redirect("/swagger"));
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-app.Run($"http://0.0.0.0:{port}");
+var port = Environment.GetEnvironmentVariable("PORT");
+
+if (string.IsNullOrWhiteSpace(port))
+{
+    app.Run();
+}
+else
+{
+    app.Run($"http://0.0.0.0:{port}");
+}

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shorten.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d75efe6d793055b89411f0bb3f6ad960638d9ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a041f4e4f60364e07d0b2ab5cc2b60458286ef4c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shorten.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shorten.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
