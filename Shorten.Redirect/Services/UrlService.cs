@@ -19,35 +19,58 @@ namespace Shorten.Redirect.Services
             var shortCode = GenerateShortCode();
             await _repo.CreateAsync(originalUrl, shortCode);
 
-            // Lưu vào cache luôn sau khi tạo
-            await _cache.SetStringAsync(shortCode, originalUrl, new DistributedCacheEntryOptions
+            try
             {
-                AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(24)
-            });
+                await _cache.SetStringAsync(shortCode, originalUrl, new DistributedCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(24)
+                });
+
+                Console.WriteLine($"Cache set success: {shortCode}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Redis set error: {ex.Message}");
+            }
 
             return shortCode;
         }
 
         public async Task<string?> GetOriginalUrlAsync(string shortCode)
         {
-            // Kiểm tra cache trước
-            var cached = await _cache.GetStringAsync(shortCode);
-            if (cached != null)
+            try
             {
-                // Cache hit — không cần query DB
-                await _repo.IncrementClickCountAsync(shortCode);
-                return cached;
+                var cached = await _cache.GetStringAsync(shortCode);
+                if (cached != null)
+                {
+                    Console.WriteLine($"Cache hit: {shortCode}");
+                    await _repo.IncrementClickCountAsync(shortCode);
+                    return cached;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Redis get error: {ex.Message}");
             }
 
-            // Cache miss — query DB
+            Console.WriteLine($"Cache miss: {shortCode}");
+
             var entry = await _repo.GetByShortCodeAsync(shortCode);
             if (entry == null) return null;
 
-            // Lưu vào cache cho lần sau
-            await _cache.SetStringAsync(shortCode, entry.OriginalUrl, new DistributedCacheEntryOptions
+            try
             {
-                AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(24)
-            });
+                await _cache.SetStringAsync(shortCode, entry.OriginalUrl, new DistributedCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(24)
+                });
+
+                Console.WriteLine($"Cache set success: {shortCode}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Redis set error: {ex.Message}");
+            }
 
             await _repo.IncrementClickCountAsync(shortCode);
             return entry.OriginalUrl;
