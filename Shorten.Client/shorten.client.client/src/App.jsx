@@ -103,7 +103,7 @@ function App() {
                         onClick={handleShorten}
                         disabled={loading}
                     >
-                        {loading ? "Dang xu ly..." : "Get my short link"}
+                        {loading ? "Processing..." : "Get my short link"}
                         <span aria-hidden="true">→</span>
                     </button>
                 </div>
