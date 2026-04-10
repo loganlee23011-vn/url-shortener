@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+﻿name: CI/CD Pipeline
 
 on:
   push:
@@ -49,4 +49,8 @@ jobs:
       - name: Deploy to Render
         run: |
           curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
+
+             # Bước Merit: Linting / Static Analysis
+      - name: Lint with dotnet format
+        run: dotnet format --verify-no-changes --severity warn
     
