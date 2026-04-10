@@ -609,7 +609,6 @@ C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.AspNetCore.WebSockets.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.AspNetCore.WebUtilities.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.CSharp.dll
-C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Configuration.Binder.dll
@@ -622,7 +621,6 @@ C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Configuration.Xml.dll
-C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Diagnostics.Abstractions.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Diagnostics.dll
@@ -641,7 +639,6 @@ C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Localization.dll
-C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Logging.Configuration.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Logging.Console.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Logging.Debug.dll
@@ -652,8 +649,6 @@ C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.ObjectPool.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Options.DataAnnotations.dll
-C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Options.dll
-C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.Primitives.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Extensions.WebEncoders.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.JSInterop.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\Microsoft.Net.Http.Headers.dll
@@ -684,7 +679,6 @@ C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\System.Data.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\System.Diagnostics.Contracts.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\System.Diagnostics.Debug.dll
-C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\System.Diagnostics.DiagnosticSource.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\System.Diagnostics.EventLog.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\System.Diagnostics.FileVersionInfo.dll
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\refs\System.Diagnostics.Process.dll
@@ -1013,3 +1007,11 @@ C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\obj\Debug\net8.0\
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\obj\Debug\net8.0\Shorten.Tests.pdb
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\obj\Debug\net8.0\Shorten.Tests.genruntimeconfig.cache
 C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\obj\Debug\net8.0\ref\Shorten.Tests.dll
+C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\package-lock.json
+C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\StackExchange.Redis.dll
+C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\FSC\Downloads\UrlShortener\UrlShortener\Shorten.Tests\bin\Debug\net8.0\System.IO.Hashing.dll
